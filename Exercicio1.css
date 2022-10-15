@@ -1,0 +1,50 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  height: 100vh;
+}
+@media screen and (max-width: 640px) {
+  body {
+    background-color: rgb(227, 185, 130);
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1007px) {
+  body {
+    background-color: #f3f037;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1008px) {
+  body {
+    background-color: #0abeaf;
+  }
+}
+
+.card-inicial {
+  height: 100px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #DFE6ED;
+  color: black;
+}
+@media screen and (max-width: 600px) {
+  .card-inicial {
+    display: none;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1007px) {
+  .card-inicial {
+    background-color: #bf5beb;
+    color: white;
+    border: 3px solid #aa0fec;
+  }
+}/*# sourceMappingURL=Exercicio1.css.map */

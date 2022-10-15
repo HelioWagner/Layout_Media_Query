@@ -1,0 +1,100 @@
+$amarelo      : #FCE6A8;
+$verde        : #8FBCB3;
+$cinza-claro  : #DFE6ED;
+$cinza-medio  : #C3CFD9;
+$cinza-escuro : #788895;
+$roxo         : #aa0fec;
+$roxoclaro    : #bf5beb;
+$azul         : #96C3EB;
+$preto        : black;
+$branco       : white;
+$marron       : rgb(227, 185, 130);
+$azulescuro   : rgb(26, 118, 238);
+$vermelho     : rgb(124, 3, 3);
+
+@mixin busca_cor_fundo($cor) {
+    background-color: $cor;
+}
+
+@mixin busca_cor_fonte($cor) {
+    color: $cor;
+}
+
+* {
+    padding: 0px;
+     margin: 0px;
+     box-sizing: border-box;     
+}
+
+
+body {
+    display: grid;
+    height: 100vh; 
+    padding: 10px;
+    gap: 10px;
+    @include busca_cor_fundo($amarelo);
+    @media screen and (max-width: 640px) {
+       @include busca_cor_fundo($marron);  
+       grid-template-columns: 1fr;
+       grid-template-rows: 15% 70% 15% ;       
+       grid-template-areas: "cabecalho"
+                           "card-principal"
+                           "card-rodape";  
+    }
+    @media screen and (min-width: 641px) and (max-width: 1007px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 15% 20% 50% 15% ;       
+        grid-template-areas: "cabecalho"
+                            "card-artigo" 
+                            "card-principal"
+                            "card-rodape";  
+    }
+
+    @media screen and (min-width: 1008px) {
+        grid-template-columns: 20%  80%;
+        grid-template-rows: 15% 70% 15% ;
+        grid-template-areas: "cabecalho cabecalho"
+                            "card-artigo card-principal" 
+                            "card-rodape card-rodape";  
+    }
+}
+
+.cabecalho {
+   grid-area: cabecalho;
+   @include busca_cor_fundo($verde);  
+   display: flex;
+   justify-content: center;
+   align-items: center;   
+   
+
+   @media screen and (max-width: 640px) {
+      font-size: 40px;
+      @include busca_cor_fonte($vermelho);
+   }
+
+   @media screen and (min-width: 641px) and (max-width: 1007px) {
+      font-size: 40px;
+      @include busca_cor_fonte($roxo);
+   } 
+
+   @media screen and (min-width: 1008px) {
+      font-size: 50px;
+      @include busca_cor_fonte($azulescuro);
+   }
+}
+
+.card-artigo {
+   grid-area: card-artigo;
+   @include busca_cor_fundo($azul);  
+}
+
+
+.card-principal {
+    grid-area: card-principal ;
+    @include busca_cor_fundo($cinza-medio); 
+}
+
+.card-rodape {
+    grid-area: card-rodape;
+    @include busca_cor_fundo($verde);  
+}

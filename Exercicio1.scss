@@ -1,0 +1,66 @@
+$amarelo      : #f3f037;
+$verde        : #0abeaf;
+$cinza-claro  : #DFE6ED;
+$cinza-medio  : #C3CFD9;
+$cinza-escuro : #788895;
+$roxo         : #aa0fec;
+$roxoclaro    : #bf5beb;
+$azul         : #96C3EB;
+$preto        : black;
+$branco       : white;
+$marron       : rgb(227, 185, 130);
+
+@mixin busca_cor_fundo($cor) {
+    background-color: $cor;
+}
+
+@mixin busca_cor_fonte($cor) {
+    color: $cor;
+}
+
+* {
+    padding: 0px;
+     margin: 0px;
+     box-sizing: border-box;     
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding: 20px;   
+    height: 100vh; 
+
+    @media screen and (max-width: 640px) {
+        @include busca_cor_fundo($marron);  
+    }
+
+    @media screen and (min-width: 641px) and (max-width: 1007px) {
+        @include busca_cor_fundo($amarelo);  
+        align-items: center;
+    }
+
+    @media screen and (min-width: 1008px) {
+        @include busca_cor_fundo($verde);  
+    }
+}
+
+.card-inicial {
+    height: 100px;
+    width : 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include busca_cor_fundo($cinza-claro);  
+    @include busca_cor_fonte($preto);  
+
+    @media screen and (max-width: 600px) {
+          display: none;  
+    }
+
+    @media screen and (min-width: 641px) and (max-width: 1007px) {
+        @include busca_cor_fundo($roxoclaro);  
+        @include busca_cor_fonte($branco);  
+        border: 3px solid $roxo;
+        
+    }
+}
