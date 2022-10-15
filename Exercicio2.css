@@ -13,8 +13,8 @@ body {
 }
 @media screen and (max-width: 640px) {
   body {
-    background-color: rgb(227, 185, 130);
-    grid-template-columns: 1fr;
+    padding: 5px;
+    grid-template-columns: 100%;
     grid-template-rows: 15% 70% 15%;
     grid-template-areas: "cabecalho" "card-principal" "card-rodape";
   }
@@ -43,7 +43,7 @@ body {
 }
 @media screen and (max-width: 640px) {
   .cabecalho {
-    font-size: 40px;
+    font-size: 25px;
     color: rgb(124, 3, 3);
   }
 }

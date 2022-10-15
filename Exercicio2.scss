@@ -34,8 +34,8 @@ body {
     gap: 10px;
     @include busca_cor_fundo($amarelo);
     @media screen and (max-width: 640px) {
-       @include busca_cor_fundo($marron);  
-       grid-template-columns: 1fr;
+       padding: 5px;
+       grid-template-columns: 100%;
        grid-template-rows: 15% 70% 15% ;       
        grid-template-areas: "cabecalho"
                            "card-principal"
@@ -68,7 +68,7 @@ body {
    
 
    @media screen and (max-width: 640px) {
-      font-size: 40px;
+      font-size: 25px;
       @include busca_cor_fonte($vermelho);
    }
 

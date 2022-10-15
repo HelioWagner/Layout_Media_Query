@@ -48,8 +48,17 @@ body{
      @include busca_cor($azulMedio);
      p {
         color: $corBranco; 
-        font-size: 30px;
+        font-size: 40px;
+        @media screen and (max-width: 640px) {
+          font-size: 25px;
+          @include busca_cor_fonte($vermelho);
+       }
+
      }  
+
+
+
+     
 }
 
 
